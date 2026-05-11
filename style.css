@@ -2,6 +2,7 @@
 :root {
     /* Light Mode */
     --bg-color: #fcfcfc;
+    --bg-rgb: 252, 252, 252;
     --surface-color: #f4f4f5;
     --text-primary: #18181b;
     --text-secondary: #52525b;
@@ -22,6 +23,7 @@
 
 [data-theme="dark"] {
     --bg-color: #09090b;
+    --bg-rgb: 9, 9, 11;
     --surface-color: #18181b;
     --text-primary: #fafafa;
     --text-secondary: #a1a1aa;
@@ -117,12 +119,19 @@ body {
     top: 0;
     width: 100%;
     padding: 1.5rem 0;
-    background: rgba(var(--bg-color), 0.8);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
+    background: transparent;
     z-index: 1000;
+    border-bottom: 1px solid transparent;
+    transition: all var(--transition-smooth);
+}
+
+.navbar.scrolled {
+    padding: 1rem 0;
+    background: rgba(var(--bg-rgb), 0.85);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
     border-bottom: 1px solid var(--border-color);
-    transition: background var(--transition-smooth), border-color var(--transition-smooth);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.05);
 }
 .nav-container {
     max-width: 1100px;
