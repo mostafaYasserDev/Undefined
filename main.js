@@ -198,6 +198,7 @@ function router() {
 
 // Initialize
 function init() {
+    console.log("Portfolio V2.1 - Navbar Blur Active");
     // Load theme from localStorage
     const savedTheme = localStorage.getItem('portfolio-theme') || 'light';
     htmlEl.setAttribute('data-theme', savedTheme);
