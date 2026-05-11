@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mostafa Yasser | Undefined</title>
+    <meta name="description" content="A quiet, thoughtful digital space that reflects a creative mind.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Pixelify Sans for Pixel aesthetics, Almarai for Arabic, Inter for English paragraphs -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700;800&family=Inter:wght@300;400;500;600&family=Pixelify+Sans:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="noise-overlay"></div>
+
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <a href="#/" class="pixel-text">ME<span class="cursor-blink">_</span></a>
+            </div>
+            <div class="nav-links">
+                <a href="#/" data-i18n="nav_home">Home</a>
+                <a href="#about" data-i18n="nav_about">About</a>
+                <a href="#projects" data-i18n="nav_projects">Projects</a>
+                <a href="#blog" data-i18n="nav_blog">Blog</a>
+                <a href="#contact" data-i18n="nav_contact">Contact</a>
+            </div>
+            <div class="nav-controls">
+                <button id="lang-toggle" class="control-btn" aria-label="Toggle Language">عربي</button>
+                <button id="theme-toggle" class="control-btn" aria-label="Toggle Theme">
+                    <svg id="theme-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <div id="main-view">
+            <!-- Hero Section -->
+            <section id="hero" class="hero-section">
+                <div class="hero-content">
+                    <h1 class="pixel-text" data-i18n="hero_title">Thoughtful & Minimal</h1>
+                    <p class="subtitle" data-i18n="hero_subtitle">Multi-disciplinary creator crafting digital
+                        experiences.</p>
+                    <a href="#projects" class="cta-button pixel-border" data-i18n="hero_cta">View My Work</a>
+                </div>
+                <div class="hero-decoration">
+                    <div class="pixel-grid"></div>
+                </div>
+            </section>
+
+            <!-- About Section -->
+            <section id="about" class="about-section">
+                <div class="container">
+                    <h2 class="section-title pixel-text" data-i18n="about_title">About Me</h2>
+                    <div class="about-content">
+                        <p data-i18n="about_text">I move between programming, writing, design, voice-over work, and many
+                            other skills — building digital experiences with
+                            no clear boundaries. I experiment a lot, keep learning constantly, and create things out of
+                            chaos that feel like me.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Projects Section -->
+            <section id="projects" class="projects-section">
+                <div class="container">
+                    <h2 class="section-title pixel-text" data-i18n="projects_title">Selected Work</h2>
+
+                    <div class="filter-tabs" id="project-filters">
+                        <!-- Filters will be generated dynamically by JS -->
+                    </div>
+
+                    <div class="projects-grid" id="projects-container">
+                        <!-- Project cards will be rendered here by JS -->
+                    </div>
+
+                    <div class="load-more-container text-center" style="margin-top: 3rem;">
+                        <button type="button" id="load-more-projects" class="filter-btn" style="display: none;"
+                            data-i18n="load_more">Load More</button>
+                        <p id="projects-end-message" class="pixel-text"
+                            style="display: none; color: var(--text-secondary); margin-top: 1rem;"
+                            data-i18n="projects_end">I hope you liked my projects!</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Blog Section -->
+            <section id="blog" class="blog-section">
+                <div class="container">
+                    <h2 class="section-title pixel-text" data-i18n="blog_title">Notes & Thoughts</h2>
+                    <div class="blog-list" id="blog-container">
+                        <!-- Blog items will be rendered here by JS -->
+                    </div>
+
+                    <div class="load-more-container text-center" style="margin-top: 2rem;">
+                        <button type="button" id="load-more-blog" class="filter-btn" style="display: none;"
+                            data-i18n="load_more">Load More</button>
+                        <p id="blog-end-message" class="pixel-text"
+                            style="display: none; color: var(--text-secondary); margin-top: 1rem;" data-i18n="blog_end">
+                            Thanks for reading!</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Contact Section -->
+            <section id="contact" class="contact-section">
+                <div class="container text-center">
+                    <h2 class="section-title pixel-text" data-i18n="contact_title">Get in Touch</h2>
+                    <p class="contact-text" data-i18n="contact_text">Let's create something meaningful together.</p>
+                    <a href="mailto:moustafa0yasser123@gmail.com" class="contact-email"
+                        data-i18n="contact_email">moustafa0yasser123@gmail.com</a>
+                    <div class="social-links">
+                        <a href="https://github.com/mostafaYasserDev" target="_blank" class="pixel-link">GitHub</a>
+                        <a href="https://t.me/mostafaYasserDev" target="_blank" class="pixel-link">Telegram (Personal
+                            Channel)</a>
+                        <a href="https://www.linkedin.com/in/mostafayasserdev/" target="_blank"
+                            class="pixel-link">LinkedIn</a>
+                    </div>
+                </div>
+            </section>
+        </div> <!-- End main-view -->
+
+        <!-- Detail View -->
+        <div id="detail-view" class="container" style="display: none; padding: 8rem 2rem 4rem 2rem; min-height: 80vh;">
+            <button id="back-btn" class="filter-btn" style="margin-bottom: 2rem;">&larr; <span data-i18n="back"
+                    id="back-text">Back</span></button>
+            <div id="detail-content" class="markdown-body"></div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p data-i18n="footer_text">© 2026 Creative Mind. Designed with intention.</p>
+        </div>
+    </footer>
+
+    <script type="module" src="/main.js"></script>
+</body>
+
+</html>
